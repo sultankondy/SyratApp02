@@ -1,0 +1,72 @@
+[
+    { 
+        "title": "Day of Ashura", 
+        "desc": "test", 
+        "hijriMonth": 1, 
+        "hijriMonthName": "Muharram", 
+        "hijriDay": 10 
+    },
+    { 
+        "title": "Mawlid an-Nabi", 
+        "desc": "test", 
+        "hijriMonth": 3, 
+        "hijriMonthName": "Rabi` al-Awwal", 
+        "hijriDay": 12 
+    },
+    { 
+        "title": "Night Raghaib", 
+        "desc": "test", 
+        "hijriMonth": 7, 
+        "hijriMonthName": "Rajab", 
+        "hijriDay": 1 
+    },
+    { 
+        "title": "Miraj", 
+        "desc": "test", 
+        "hijriMonth": 7, 
+        "hijriMonthName": "Rajab", 
+        "hijriDay": 27 
+    },
+    { 
+        "title": "Night of Baraat", 
+        "desc": "test", 
+        "hijriMonth": 8, 
+        "hijriMonthName": "Sha`ban", 
+        "hijriDay": 15 
+    },
+    { 
+        "title": "Ramadan", 
+        "desc": "test", 
+        "hijriMonth": 9, 
+        "hijriMonthName": "Ramadan", 
+        "hijriDay": 1 
+    },
+    { 
+        "title": "Night al-Qadr", 
+        "desc": "test", 
+        "hijriMonth": 9, 
+        "hijriMonthName": "Ramadan", 
+        "hijriDay": 27 
+    },
+    { 
+        "title": "Eid al-Fitr", 
+        "desc": "test", 
+        "hijriMonth": 10, 
+        "hijriMonthName": "Shawwal", 
+        "hijriDay": 1 
+    },
+    { 
+        "title": "Day of Arafat", 
+        "desc": "test", 
+        "hijriMonth": 12, 
+        "hijriMonthName": "Dhul-Hijjah", 
+        "hijriDay": 9 
+    },
+    { 
+        "title": "Eid al-Adha", 
+        "desc": "test", 
+        "hijriMonth": 12, 
+        "hijriMonthName": "Dhul-Hijjah", 
+        "hijriDay": 10 
+    }
+]
