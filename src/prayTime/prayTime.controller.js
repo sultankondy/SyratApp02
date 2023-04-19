@@ -13,15 +13,15 @@ let currentLocation;
 
 //CONTROLLERS START
 const getCurrentYearScheduleByMonth = (req, res) => {
-    res.send(timesForMonth(req));
+    res.json(timesForMonth(req));
 }
 
 const getCurrentDaySchedule = (req, res) => {
-    res.send(currentDaySchedule(req));
+    res.json(currentDaySchedule(req));
 }
 
 const getQiblaDirection = (req, res) => {
-    res.send(qiblaDirection());
+    res.json(qiblaDirection());
 
 }
 
@@ -36,7 +36,8 @@ const getHolidays = (req, res) => {
 }
 
 const getDailyAyahByRandom = (req, res) => {
-    res.send(getRandomAyah())
+    res.send(getQuranAyahRandom())
+    console.log(getQuranAyahRandom())
 }
   
 //CONTROLLERS END
@@ -256,6 +257,21 @@ function holidays(){
 
 }
 
+const getQuranAyahRandom = async () => {
+    // https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/55.json
+    const maxSuraForCdn = 114;
+    const randomSura = Math.floor(Math.random() * maxSuraForCdn) + 1;
+    const respSura = await axios.get(`https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/${randomSura}.json`);
+    const maxAyahOfSuraForCdn = respSura.data.total_verses;
+    const randomAyah = Math.floor(Math.random() * maxAyahOfSuraForCdn) + 1;
+    const respAyah = respSura.data.verses[randomAyah]
+    const response = await axios.get(`http://api.alquran.cloud/v1/ayah/${randomSura}:${randomAyah}`);
+    var dictionary = response.data.data; 
+    dictionary['text'] = respAyah.text;
+    dictionary['translation'] = respAyah.translation;
+    //console.log(dictionary)
+    return dictionary;
+}
 // FUNCTIONS END
 
 
